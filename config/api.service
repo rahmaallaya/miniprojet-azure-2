@@ -1,0 +1,12 @@
+[Unit]
+Description=API Flask miniprojet
+After=network.target
+
+[Service]
+User=azureuser
+WorkingDirectory=/home/azureuser/api
+ExecStart=/usr/bin/python3 /home/azureuser/api/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
